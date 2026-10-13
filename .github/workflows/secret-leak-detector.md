@@ -3,7 +3,7 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: read
-  copilot-requests: write
+  copilot-requests: none
   issues: read
   pull-requests: read
   security-events: read
