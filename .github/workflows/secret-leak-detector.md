@@ -25,7 +25,7 @@ Flags possible credential leaks in diffs or repository content.
 Run when a suspicious diff, pasted token, credentials file, or high-entropy secret-like value appears in review scope.
 
 ## Instructions
-1. Inspect added lines, changed files, and filenames for secret-like material: API keys, tokens, private keys, connection strings, `.env` values, CI credentials, or copied cloud secrets.
+1. Inspect added lines, changed files, and filenames for secret-like material: API keys, tokens, private keys, JWT Key creation secrets, connection strings, `.env` values, CI credentials, or copied cloud secrets.
 2. Distinguish real exposure risk from harmless examples, test fixtures, redacted placeholders, or obviously fake sample values.
 3. Never repeat or quote the secret value in output. Refer only to the file path, line context, and credential type.
 4. If the signal is strong, use safe outputs to leave one urgent comment instructing the contributor to rotate the credential, remove it from history, and replace it with a secret manager or encrypted secret.
