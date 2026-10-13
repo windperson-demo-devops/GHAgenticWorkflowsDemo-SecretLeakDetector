@@ -175,7 +175,7 @@ namespace EC226.Configuration
             di.Add(SystemSettingConstVars.FilesStorageFileMaxSize, new DictionaryKeyValues() { sKey = "檔案最大大小", sValue = "10" });
             di.Add(SystemSettingConstVars.FilesStorageBucketBindUrl, new DictionaryKeyValues() { sKey = "雲端儲存繫結域名", sValue = "http://www.coreshop.cn/" });
             di.Add(SystemSettingConstVars.FilesStorageAccessKeyId, new DictionaryKeyValues() { sKey = "雲端儲存授權賬戶", sValue = "" });
-            di.Add(SystemSettingConstVars.FilesStorageAccessKeySecret, new DictionaryKeyValues() { sKey = "雲端儲存授權金鑰", sValue = "" });
+            di.Add(SystemSettingConstVars.FilesStorageAccessKeySecret, new DictionaryKeyValues() { sKey = "雲端儲存授權金鑰", sValue = "W1234567890123456" });
             di.Add(SystemSettingConstVars.FilesStorageTencentAccountId, new DictionaryKeyValues() { sKey = "騰訊云賬戶標識", sValue = "" });
             di.Add(SystemSettingConstVars.FilesStorageTencentCosRegion, new DictionaryKeyValues() { sKey = "騰訊云桶地域", sValue = "" });
             di.Add(SystemSettingConstVars.FilesStorageTencentBucketName, new DictionaryKeyValues() { sKey = "騰訊云桶名稱", sValue = "" });
