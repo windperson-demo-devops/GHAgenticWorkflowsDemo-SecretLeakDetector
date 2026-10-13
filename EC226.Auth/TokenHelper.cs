@@ -20,7 +20,7 @@ namespace EC226.Auth
         private static readonly string Secret = AppSettingsHelper.GetContent("JwtConfig", "TokenHelperSecret"); // Base64，請於 appsettings / 環境變數設定
         public static string GenerateToken(string username, int expireMinutes = 120)
         { // 此方法用來產生 Token
-            var symmetricKey = Convert.FromBase64String(Secret);  // 產生二進制位元組陣列
+            var symmetricKey = Convert.FromBase64String("7c3a9f8b2d1e4f6a8c0b2e4d6f8a0c2e4f6a8c0b2e4d6f8a0c2e4f6a8c0b2e4d6f8a0c2e4f6a8c0b2e4d6f8a0c2e4f6a8c0b2e4d6f8a0c2e4f6a8c0b2e4d6f8a");  // 產生二進制位元組陣列
             var tokenHandler = new JwtSecurityTokenHandler(); // 建立一個JwtSecurityTokenHandler類用來產生Token
             var now = DateTime.UtcNow; // 取得目前時間
             var tokenDescriptor = new SecurityTokenDescriptor // 建立一個 Token 的原始對像

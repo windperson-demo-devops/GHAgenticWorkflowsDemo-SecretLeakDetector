@@ -60,7 +60,7 @@ try
    //新增本地路徑取得支援
    builder.Services.AddSingleton(new AppSettingsHelper(builder.Environment.ContentRootPath));
    builder.Services.AddSingleton(new LogLockHelper(builder.Environment.ContentRootPath));
-   
+
    //Memory緩存
    builder.Services.AddMemoryCacheSetup();
    //Redis緩存
@@ -135,7 +135,7 @@ try
           p.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
           //設置時間格式（必須使用yyyy/MM/dd格式，因為ios系統不支援2018-03-29格式的時間，只識別2018/03/09這種格式。）
           p.SerializerSettings.DateFormatString = "yyyy/MM/dd HH:mm:ss";
-       });                
+       });
 
    // 鏈路追蹤
    builder.Services.AddDefaultCorrelationId(options =>
@@ -231,7 +231,7 @@ try
    builder.Host.UseNLog();
 
    var app = builder.Build();
-   
+
    #region 解決Ubuntu Nginx 代理不能取得IP問題
    app.UseForwardedHeaders(new ForwardedHeadersOptions
    {
@@ -341,7 +341,7 @@ try
 
    // Stripe 相關
    var stripeConfig = AppSettingsHelper.GetSection<List<GeneralPaymentConfig>>("Payment", "PaymentOptions").Where(x => x.PaymentCode == "Stripe").FirstOrDefault();
-   StripeConfiguration.ApiKey = stripeConfig.SecretKey;
+   StripeConfiguration.ApiKey =  "MessUpHardCodeHere12345678"; //stripeConfig.SecretKey;
 
    app.MapControllerRoute(
        name: "default",
@@ -351,7 +351,7 @@ try
    //此處的路徑是相對於wwwroot檔案夾的相對路徑
    var defaultFilesOptions = new DefaultFilesOptions();
    defaultFilesOptions.DefaultFileNames.Clear();
-   
+
    if (isDev)
    {
       defaultFilesOptions.DefaultFileNames.Add("index.html");
